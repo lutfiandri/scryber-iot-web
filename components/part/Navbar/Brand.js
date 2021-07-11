@@ -5,7 +5,7 @@ import Card from '../../ui/Card';
 export default function Brand() {
   return (
     <Card>
-      <Center>
+      <Center px="2rem">
         <Box w="2rem" h="2rem" pos="relative">
           <Image
             src="/scryberiot.png"
