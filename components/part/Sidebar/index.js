@@ -3,6 +3,7 @@ import { HiHome } from 'react-icons/hi';
 import NavItem from './NavItem';
 import Brand from './Brand';
 import Logout from './Logout';
+import Forum from './Forum';
 
 export default function Sidebar() {
   return (
@@ -17,8 +18,9 @@ export default function Sidebar() {
       color="whiteAlpha.800"
     >
       <Brand />
-      <Divider />
+      <Divider mb="0.5rem" />
       <NavItem text="Beranda" icon={HiHome} isActive />
+      <Forum />
       <Spacer />
       <Logout />
     </Flex>

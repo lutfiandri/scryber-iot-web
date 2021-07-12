@@ -4,6 +4,7 @@ const styles = {
   global: {
     'html, body': {
       bg: 'gray.100',
+      color: 'blackAlpha.800',
     },
   },
 };

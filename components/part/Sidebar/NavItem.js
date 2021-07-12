@@ -8,7 +8,7 @@ export default function NavItem({ icon, text, isActive, onClick }) {
       as="button"
       w="full"
       rounded="md"
-      py="0.5rem"
+      py="1rem"
       px="1rem"
       my="0.5rem"
       transition="all"
