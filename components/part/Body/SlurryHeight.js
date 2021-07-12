@@ -5,7 +5,7 @@ import { options, dummyData } from '../../../utils/chart';
 export default function SlurryHeight() {
   return (
     <Card title="KETINGGIAN SLURRY" w="full">
-      <Bar data={dummyData} options={options} width={240} height={200} />
+      <Bar data={dummyData} options={options} width={180} height={200} />
     </Card>
   );
 }

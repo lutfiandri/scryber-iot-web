@@ -8,7 +8,7 @@ import Humidity from './Humidity';
 
 export default function Body() {
   return (
-    <Grid templateColumns="repeat(4, 1fr)" gap="1rem">
+    <Grid templateColumns="repeat(4, 1fr)" gap="1rem" w="100%">
       <GridItem rowStart={1} rowEnd={2} colStart={1} colEnd={4}>
         <GasProduced />
       </GridItem>

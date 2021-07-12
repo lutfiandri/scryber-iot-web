@@ -5,7 +5,7 @@ import { options, dummyData } from '../../../utils/chart';
 export default function Viscosity() {
   return (
     <Card title="RATA-RATA KEKENTALAN" w="full">
-      <Bar data={dummyData} options={options} width={240} height={200} />
+      <Bar data={dummyData} options={options} width={180} height={200} />
     </Card>
   );
 }
