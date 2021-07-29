@@ -15,3 +15,17 @@ export const dummyData = {
     },
   ],
 };
+
+export function getChartData(labels, data) {
+  return {
+    labels,
+    datasets: [
+      {
+        data,
+        fill: false,
+        backgroundColor: 'rgb(255, 99, 132)',
+        borderColor: 'rgba(255, 99, 132, 0.2)',
+      },
+    ],
+  };
+}

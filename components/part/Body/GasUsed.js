@@ -1,11 +1,16 @@
 import { Line } from 'react-chartjs-2';
 import Card from '../../ui/Card';
-import { options, dummyData } from '../../../utils/chart';
+import { options, getChartData } from '../../../utils/chart';
 
-export default function GasUsed() {
+export default function GasUsed({ labels, data }) {
   return (
-    <Card title="RATA-RATA PENGGUNAAN GAS" w="full">
-      <Line data={dummyData} options={options} width={180} height={200} />
+    <Card title="PENGGUNAAN GAS" w="full">
+      <Line
+        data={() => getChartData(labels, data)}
+        options={options}
+        width={180}
+        height={200}
+      />
     </Card>
   );
 }
