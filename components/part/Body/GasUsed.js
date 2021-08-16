@@ -1,14 +1,18 @@
 import { Line } from 'react-chartjs-2';
+import { createRef } from 'react';
 import Card from '../../ui/Card';
 import { options, getChartData } from '../../../utils/chart';
+import useContainerSize from '../../../hooks/useContainerSize';
 
 export default function GasUsed({ labels, data }) {
+  const containerRef = createRef(null);
+  const containerSize = useContainerSize(containerRef);
   return (
-    <Card title="PENGGUNAAN GAS" w="full">
+    <Card title="PENGGUNAAN GAS" w="full" ref={containerRef}>
       <Line
         data={() => getChartData(labels, data)}
         options={options}
-        width={180}
+        width={containerSize.width - 60}
         height={200}
       />
     </Card>

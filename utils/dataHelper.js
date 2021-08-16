@@ -40,8 +40,8 @@ export function parseFirebaseResponseToLabelsAndData(originData, dots = 6) {
     weeksToData(dataThisWeek, 'e_current');
     weeksToData(dataThisWeek, 'gas_produced');
     weeksToData(dataThisWeek, 'gas_used');
-    weeksToData(dataThisWeek, 'humidity'); // doughnut chart
-    weeksToData(dataThisWeek, 'ph'); // doughnut chart
+    weeksToData(dataThisWeek, 'humidity');
+    weeksToData(dataThisWeek, 'ph');
     weeksToData(dataThisWeek, 'slurry_height');
     weeksToData(dataThisWeek, 'temperature');
     weeksToData(dataThisWeek, 'viscosity');
@@ -49,7 +49,11 @@ export function parseFirebaseResponseToLabelsAndData(originData, dots = 6) {
     labels.push(new Date(timeLimitNext).toLocaleDateString('id-ID'));
   }
 
-  console.log(data);
+  // dougnut chart only need last 1 week
+  data.ph = [data.ph[dots - 1], 14 - data.ph[dots - 1]];
+  data.humidity = [data.humidity[dots - 1], 100 - data.humidity[dots - 1]]; // misal max humidity 100
+
+  // console.log(data);
 
   return { data, labels };
 }
