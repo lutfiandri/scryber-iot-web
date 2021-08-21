@@ -13,7 +13,7 @@ export default function GasProduced({ labels, data }) {
       <Line
         data={() => getChartData(labels, data)}
         options={options}
-        width={containerSize.width - 60}
+        width={680}
         height={200}
       />
     </Card>

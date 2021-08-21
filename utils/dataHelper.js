@@ -1,6 +1,21 @@
 /* eslint-disable no-plusplus */
 import { week, getSundayThisWeek } from './time';
 
+const months = {
+  0: 'Jan',
+  1: 'Feb',
+  2: 'Mar',
+  3: 'Apr',
+  4: 'Mei',
+  5: 'Jun',
+  6: 'Jul',
+  7: 'Agu',
+  8: 'Sep',
+  9: 'Okt',
+  10: 'Nov',
+  11: 'Des',
+};
+
 export function getAvg(arr) {
   if (arr.length === 0) return 0;
   return arr.reduce((a, b) => a + b, 0) / arr.length;
@@ -46,7 +61,11 @@ export function parseFirebaseResponseToLabelsAndData(originData, dots = 6) {
     weeksToData(dataThisWeek, 'temperature');
     weeksToData(dataThisWeek, 'viscosity');
 
-    labels.push(new Date(timeLimitNext).toLocaleDateString('id-ID'));
+    // labels.push(new Date(timeLimitNext).toLocaleDateString('id-ID'));
+    const realDate = new Date(timeLimitNext);
+    const date = realDate.getDate();
+    const month = months[realDate.getMonth()];
+    labels.push(`${date} ${month}`);
   }
 
   // dougnut chart only need last 1 week

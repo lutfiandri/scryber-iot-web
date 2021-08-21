@@ -3,11 +3,11 @@ import { createRef } from 'react';
 import { Box, Center } from '@chakra-ui/layout';
 import Card from '../../ui/Card';
 import { options, getChartData } from '../../../utils/chart';
-import useContainerSize from '../../../hooks/useContainerSize';
+// import useContainerSize from '../../../hooks/useContainerSize';
 
 export default function Humidity({ labels, data }) {
   const containerRef = createRef(null);
-  const containerSize = useContainerSize(containerRef);
+  // const containerSize = useContainerSize(containerRef);
   return (
     <Card title="RATA-RATA KELEMBABAN" w="full" ref={containerRef}>
       <Box pos="relative">
@@ -19,7 +19,8 @@ export default function Humidity({ labels, data }) {
             ])
           }
           options={{ ...options, events: [] }}
-          width={containerSize.width - 60}
+          // width={containerSize.width - 60}
+          width={200}
           height={200}
         />
         <Center
