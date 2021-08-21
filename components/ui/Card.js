@@ -1,8 +1,18 @@
+/* eslint-disable react/display-name */
 import { Box, Center } from '@chakra-ui/react';
+import { forwardRef } from 'react';
 
-export default function Card(props) {
+const Card = forwardRef((props, ref) => {
   return (
-    <Box borderRadius="lg" shadow="lg" bg="white" p="1rem" {...props}>
+    <Box
+      borderRadius="lg"
+      shadow="lg"
+      bg="white"
+      p="1rem"
+      minH="300px"
+      {...props}
+      ref={ref}
+    >
       <Center flexDirection="column">
         {props.title && (
           <Box
@@ -18,4 +28,6 @@ export default function Card(props) {
       </Center>
     </Box>
   );
-}
+});
+
+export default Card;

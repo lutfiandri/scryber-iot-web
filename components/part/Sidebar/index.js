@@ -9,13 +9,15 @@ export default function Sidebar() {
   return (
     <Flex
       direction="column"
-      pos="sticky"
+      pos="fixed"
       left="0"
-      h="100vh"
-      w="280px"
+      bottom="0"
+      h={{ base: '60px', md: '100vh' }}
+      w={{ base: '100vw', md: '200px', lg: '280px' }}
       bg="blue.800"
       p="0.5rem"
       color="whiteAlpha.800"
+      zIndex={9999}
     >
       <Brand />
       <Divider mb="0.5rem" />

@@ -1,4 +1,5 @@
 export const options = {
+  maintainAspectRatio: false,
   legend: {
     display: false,
   },
@@ -16,14 +17,14 @@ export const dummyData = {
   ],
 };
 
-export function getChartData(labels, data) {
+export function getChartData(labels, data, bg = 'rgb(255, 99, 132)') {
   return {
     labels,
     datasets: [
       {
         data,
         fill: false,
-        backgroundColor: 'rgb(255, 99, 132)',
+        backgroundColor: bg,
         borderColor: 'rgba(255, 99, 132, 0.2)',
       },
     ],
