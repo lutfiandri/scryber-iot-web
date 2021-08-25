@@ -5,7 +5,7 @@ import NavItem from './NavItem';
 export default function Forum() {
   return (
     <Link
-      href="https://www.google.com"
+      href="https://t.me/joinchat/j233cn6OywQ4OTdl"
       // passhref={true}
       target="_blank"
       _hover={{ textDecoration: 'none' }}
