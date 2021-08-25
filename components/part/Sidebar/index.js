@@ -25,8 +25,8 @@ export default function Sidebar() {
       <Divider mb="0.5rem" />
       <NavItem text="Beranda" icon={HiHome} isActive />
       <Forum />
-      <Spacer />
-      <Logout />
+      {/* <Spacer />
+      <Logout /> */}
     </Flex>
   );
 }
