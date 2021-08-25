@@ -11,9 +11,11 @@ export default function Sidebar() {
       direction="column"
       pos="fixed"
       left="0"
-      bottom="0"
-      h={{ base: '60px', md: '100vh' }}
-      w={{ base: '100vw', md: '200px', lg: '280px' }}
+      top="0"
+      h="100vh"
+      w="240px"
+      // h={{ base: '60px', md: '100vh' }}
+      // w={{ base: '100vw', md: '200px', lg: '280px' }}
       bg="blue.800"
       p="0.5rem"
       color="whiteAlpha.800"

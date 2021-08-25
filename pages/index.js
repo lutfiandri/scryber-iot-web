@@ -13,14 +13,13 @@ export default function Home() {
 
       <Flex direction="row">
         <Sidebar />
-        <Box w={500} h={100}>
-          arst
-        </Box>
+        {/* <Box w={500} h={100}></Box> */}
         <Container
           maxW="6xl"
           m="1rem"
           centerContent
-          ml={{ base: '0px', md: '200px', lg: '280px' }}
+          ml="240px"
+          // ml={{ base: '0px', md: '200px', lg: '280px' }}
           // pb={{ base: '60px', md: '0px' }}
         >
           <Navbar />
