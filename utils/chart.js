@@ -3,6 +3,39 @@ export const options = {
   legend: {
     display: false,
   },
+  scales: {
+    yAxes: [
+      {
+        ticks: {
+          beginAtZero: true,
+        },
+      },
+    ],
+  },
+};
+
+export const options0to100 = {
+  maintainAspectRatio: false,
+  legend: {
+    display: false,
+  },
+  scales: {
+    yAxes: [
+      {
+        ticks: {
+          beginAtZero: true,
+          max: 100,
+        },
+      },
+    ],
+  },
+};
+
+export const pieOptions = {
+  maintainAspectRatio: false,
+  legend: {
+    display: false,
+  },
 };
 
 export const dummyData = {

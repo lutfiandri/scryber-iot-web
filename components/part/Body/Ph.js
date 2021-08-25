@@ -2,7 +2,7 @@ import { Doughnut } from 'react-chartjs-2';
 import { createRef } from 'react';
 import { Box, Center } from '@chakra-ui/layout';
 import Card from '../../ui/Card';
-import { options, getChartData } from '../../../utils/chart';
+import { pieOptions, getChartData } from '../../../utils/chart';
 // import useContainerSize from '../../../hooks/useContainerSize';
 
 export default function Ph({ labels, data }) {
@@ -18,7 +18,7 @@ export default function Ph({ labels, data }) {
               'rgb(255, 220, 240)',
             ])
           }
-          options={{ ...options, events: [] }}
+          options={{ ...pieOptions, events: [] }}
           // width={containerSize.width - 60}
           width={200}
           height={200}
