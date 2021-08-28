@@ -32,7 +32,7 @@ export default function Humidity({ labels, data }) {
           fontSize="1.5em"
           fontWeight="medium"
         >
-          {data[0]?.toFixed(2) || 0}
+          {data[0]?.toFixed() || 0}%
         </Center>
       </Box>
     </Card>
